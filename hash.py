@@ -176,7 +176,8 @@ elif file:
     with open('cracked-%s' % file.split('/')[-1], 'w+') as f:
         for hashvalue, cracked in result.items():
             f.write(hashvalue + ':' + cracked + '\n')
-    print ('%s Results saved in cracked-%s' % (info, file.split('/')[-1]))
+    os.system("clear")
+    print ('%s Kırılanlar kaydedildi-%s' % (info, file.split('/')[-1]))
 
 elif args.hash:
     single(args)
